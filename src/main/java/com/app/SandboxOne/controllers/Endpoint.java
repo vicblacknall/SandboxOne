@@ -1,19 +1,22 @@
 package com.app.SandboxOne.controllers;
 
 
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class Endpoint {
 
 
-    @GetMapping("/")
-    public ResponseEntity testPoint(){
+    @GetMapping(value = "/")
+    public ResponseEntity testPoint(@RequestHeader("API_KEY") String apiKey) {
 
-        return ResponseEntity.ok().body("you made it");
+        if (!apiKey.equals("123456")) {
+            return ResponseEntity.status(403).body("Access Forbidden");
+        }
+
+        return ResponseEntity.ok().header("Custom-Header", "ValueOfHeader").body("you made it");
     }
-
 }
