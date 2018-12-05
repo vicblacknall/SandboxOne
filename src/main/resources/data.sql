@@ -7,6 +7,26 @@
 -- salary int,
 -- );
 
+
+--------------------start insert departments---------------------------------
+
+insert into department(department_ID,department_name)
+values ('20','sales');
+
+insert into department(department_ID,department_name)
+values ('30','hr');
+
+insert into department(department_ID,department_name)
+values ('40','finance');
+
+insert into department(department_ID,department_name)
+values ('50','engineering');
+
+--------------------end insert departments---------------------------------
+
+
+--------------------- start insert employees--------------------------------------
+
 insert into employees(associate_ID,first_name,last_name,department,job_title,salary)
 values (156321579,'Micheal','Smith','sales','sales person',6300000);
 

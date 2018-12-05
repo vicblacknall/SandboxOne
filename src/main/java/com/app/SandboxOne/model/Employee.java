@@ -17,7 +17,9 @@ public class Employee {
     Long empID;
     String firstName;
     String lastName;
-    String department;
+
+    @ManyToOne
+    Department department;
     String jobTitle;
     Integer salary;
 
