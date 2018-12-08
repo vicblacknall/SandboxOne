@@ -1,6 +1,7 @@
 package com.app.SandboxOne.repository;
 
 import com.app.SandboxOne.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -8,7 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EmployeeRepo extends CrudRepository<Employee,Long> {
+public interface EmployeeRepo extends JpaRepository<Employee,Long> {
+
 
 List<Employee> getAllByDepartment(String dep);
 @Query(value = "select * from employees", nativeQuery = true)

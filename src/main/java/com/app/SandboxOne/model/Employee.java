@@ -18,7 +18,8 @@ public class Employee {
     String firstName;
     String lastName;
 
-    @ManyToOne
+    @ManyToOne()
+    @JoinColumn(name = "department_name")
     Department department;
     String jobTitle;
     Integer salary;

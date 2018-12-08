@@ -3,6 +3,7 @@ package com.app.SandboxOne.services;
 import com.app.SandboxOne.model.Employee;
 import com.app.SandboxOne.repository.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.stereotype.Service;
 
 import javax.xml.ws.ServiceMode;
@@ -13,10 +14,15 @@ import java.util.stream.Collectors;
 @Service
 public class EmployeesService {
 
+    RedisProperties.Jedis jedis = new RedisProperties.Jedis();
+
     @Autowired
     EmployeeRepo employeeRepo;
 
     public List<Employee> getEmployeesOverSalary(int baseSalary){
+
+
+
         List<Employee> employees = employeeRepo.getAll();
 
         if(employees.size()==0)

@@ -43,7 +43,7 @@ public class SandboxOneApplicationTests {
     @Test
     public void getEveryone(){
         List<Employee> employeeList = employeeRepo.getAll();
-
+        employeeList.forEach(System.out::println);
         Assert.assertTrue("many people were return",employeeList.size()>5);
 
     }
