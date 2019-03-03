@@ -20,13 +20,11 @@ public class FutureOptionsTest {
     public void getFutureNames() {
         CompletableFuture<List<String>> names = futureOptions.getListOfStrings();
 
-
         int listSize = 0;
         try {
             while (!names.isDone()) {
                 Thread.sleep(200);
             }
-
             listSize = names.get().size();
         } catch (InterruptedException e) {
             log.info("thread was broken");
