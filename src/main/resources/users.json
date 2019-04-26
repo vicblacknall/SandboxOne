@@ -1,0 +1,22 @@
+{
+  "ename": "bob",
+  "age": 20,
+  "users": [
+    {
+      "ename": "bill",
+      "age": 20,
+      "users": []
+    },
+    {
+      "ename": "boe",
+      "age": 20,
+      "users": [
+        {
+          "ename": "betsy",
+          "age": 20,
+          "users": []
+        }
+      ]
+    }
+  ]
+}

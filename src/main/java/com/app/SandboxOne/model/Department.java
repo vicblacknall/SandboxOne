@@ -17,7 +17,7 @@ public class Department {
 
     @Id
     String departmentName;
-
-/*    @OneToMany(mappedBy = "department")
+/*
+    @OneToMany(mappedBy = "department")
     Set<Employee> employees;*/
 }

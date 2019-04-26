@@ -5,7 +5,14 @@
 -- department varchar (30),
 -- job_title varchar (30),
 -- salary int,
+-- employees  integer[]
 -- );
+drop table users;
+create table users(
+  id varchar(100),
+  ename varchar(30),
+  age int
+);
 
 
 --------------------start insert departments---------------------------------
